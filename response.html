@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="response.css">
+    <style>
+        .bg-grey {
+          background-color: #f6f6f6;
+        }
+        .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+    
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+</style>
+    <title>Response Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid-1">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="first.html">FUTURE TIMER</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li ><a href="first.html">Home</a></li>
+            <li><a href="calendar.html">Calendar </a></li>
+            <li  class="active"><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Dont forgot your special events and leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="https://surveysparrow.com/wp-content/uploads/2023/01/Thankyou.png" style="width:100%">
+          </div>
+          <div class="column">
+            <form>
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="India">India</option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+                <option value="Russia">Russia</option>
+                <option value="Japan">Japan</option>
+                <option value="Newzealand">Newzealand</option>
+                <option value="China">China</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit" onclick='window.alert("Your feedback has been submitted");'>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container-fluid bg-grey">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2><a href="about.html"> About Us</a></h2>
+           <h4></h4>
+           <p></p>
+            <button class="btn btn-default btn-lg" >
+                <a href="response.html"><a href="response.html">Response</a></button>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-signal logo"></span>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>

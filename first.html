@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+      .bg-grey {
+        background-color: #f6f6f6;
+      }
+      .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  body {font-family:poppins;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid   #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #fdab31;
+  color: blue;
+  padding: 14px 20px;
+  margin: 1px 15px;
+  border: none;
+  cursor: pointer;
+  width:fit-content;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+      </style>
+<script>
+function alert(){
+  var u=document.getElementById("uname");
+  var p=document.getElementById("psw");
+  var v1=u.value;
+  var v2=p.value;
+  if (v1.length!=0 && v2.length!=0){
+    window.confirm("Logged in successfully!");
+}
+}
+</script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid-1">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="first.html">Final Countdown</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="first.html">Home</a></li>
+        <li><a href="calander.html">Calendar </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+          <div id="id01" class="modal">
+            
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Username</b></label><br>
+                <input type="text" placeholder="Enter Username" name="uname" id="uname" required style="width:979px;">
+                <br>
+                <label for="psw" id="psw"><b>Password</b></label><br>
+                <input type="password" placeholder="Enter Password" id="psw" name="psw" required style="width:979px;">
+                  <br>
+                <button type="submit"><a href="first.html">Login</a></button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1; width:996px;">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+          
+          <script>
+          var modal = document.getElementById('id01');
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+          </script></li>
+      </ul>
+    </div>
+  </nav>  
+
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">BIRTHDAY</div>
+          <div class="panel-body"><a href="birthday.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR77lkXGDinZMrGpaPkyjpocQklL1ypJzxgSDvDMKXKwNMuqooCNU5wVEznI8VHwQtMnZY&usqp=CAU" class="img-responsive" style="width:100% height:30%;" alt="Image"></a></div>
+          <div class="panel-footer">Grooving to big day!</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">PARTY</div>
+          <div class="panel-body"><a href="party.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSje9RibZO8A-_vxN63YradKUZoRcgzXb4wBg&usqp=CAU" class="img-responsive" style="width:100% height:30%;" alt="Image"></a></div>
+          <div class="panel-footer">Grooving to big day!</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">ANNIVERSARY</div>
+          <div class="panel-body"><a href="anniversary.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPRPsdA4hM4r9wU0uiIjBZCQRkBLAMesW9KLj8wFA2rKZD_vPu6E5JGl-8bwMOlV1DwDc&usqp=CAU" class="img-responsive" style="width:100% height:30%;" alt="Image"></a></div>
+          <div class="panel-footer">Grooving to big day!</div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+  
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">NEW YEAR</div>
+          <div class="panel-body"><a href="new year.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx4MCFtDn7O6ZtT_E-d_hBW8SOdOM_BYMe3vpc7RzfLFi9b3CDMksz5id7nCr9c2Iyo7c&usqp=CAU" class="img-responsive" style="width:100%" alt="Image"></a></div>
+          <div class="panel-footer">Grooving to big day!</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">RETIREMENT</div>
+          <div class="panel-body"><a href="retirement.html"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISFBgSFRQYGRgZFRoYGBgYGRgaGRgaGRgaGhwZGBgcIS4lHB4rIRkYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QHxISHzQrJCs0MTQ0NDQ0NDQ0NDQ0NDc0NDQ0NDQ0NDE0NDQ0NDQ2NDQ0NDQ0NDQ0NDQ0NDQ+NDQ0NP/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAgMEBQEGB//EAD4QAAIBAgQCBwUGBAYDAQAAAAECAAMRBBIhMQVxIjJBUWGBsRNykaHBI0JS0eHwM2Ky8RQVNGOCokOSwgb/xAAYAQEBAQEBAAAAAAAAAAAAAAABAAIDBP/EAB8RAQEAAgMBAQEBAQAAAAAAAAABAhESMUEhE2EiA//aAAwDAQACEQMRAD8A/VIiZauOUaDX0+M4W6dJNtUTn/5g34R85ZTx6nrC3juJcouNbQLwwI0M8R7WYfpPXYk3MQ8iJzMbxUKcqWJ7WOw5d8zcpOzJb06cT5h8XUbd28jYfAQmLqLs7eZuPgZn9I3wr6eJy8HxUMcr2B7GG3n3TqTUyl6Ys0RE9ZCNxNB5ERJEREkRESREqxFQopYLmsL2kMDiDUQMVsdvA+I8Ib+6OmiIiIJLIbXtpIyZqHLlkkInjMALk2A3JnOxHF0GiAt47D8zM3KTsyW9OlE4v+cv+BfnNOH4sjaMMp79x8eyUzxNxsdGIBiaZIiCbamSJ6BfSZ2xdMfe+AJkqWLS+jC/jp6w3DqrmFtDPJ67FjeeRDnY3E5jlGw38f0mOInK3bpJoiIk00YXEFDY9U7+HiJ1Zwp1MA+ZLd2nl2TWN8Ys9ZuMYrKPZqdWGvgO7znDl+MqZ3Zv5rDkNBKJyyy3XTGahERMtE7fB8XmHs2OoHR8R3eU4kuwdTI6t/ML8joflNY5arOU3H1Ek7lt55I5xfLfW17T0bcHsREkSipi1Vspvzl8zvhFLZtd7kdhmct+Ga9aIiJoEAREkRESRETDxatkp2G7HL5dv5ecLdTZk3XM4jjTUawPQG3j4mYoiee3f2u8miIiBdHheOKEIx6JOn8p/KfRK4CkW1nxk+l4dWz01J3HRPl+lp1/55eOWePq6tVCC5/vOTWrM5uTyHYJZjauZrdg0H1meOV2sYREQaaMPiimm693dynUWxFxtOHLadZlFgdIy6Zs2qiIg0REST1VJ0E2YYFL672+U8opYePbJzncr4ZiytgKfcR5/nMmJwTJqNR8xOrEztp8/E1Y+hka42PyPaJliiIluHTM6g7XF+W5+Ug+pmF8I2e4bS979o8JOpj1HVBPyEzvjnO1h5fnO9yxcpjXTns4rV3P3j8bekgWJ3Jmf0/h4O5eLjvnCiX6fxcHdEThSQc95+Mv0/i4O3E4wruPvN8TLFxdQfevzAj+kXCtuOaoFJTf4m3bbxksMXyDOLNbX9fGZE4g3aoPK4mrC4gO2UAg/L4xmUtZuNkXzj8dOqDwY+k7z0SBe95w+Opojcx8bEehjnLMVj248RE87uRE6mBwuUZ2Gp28B+cky08FUbWwHP8AKdTh6GmrKTe5uLcv7SUSmVl3BZthYEbzybXQEWMyOtjabxy2zZpGIiaRERJPWUg2PZPJ08Xhc/SHW9f1nNZSDYixlZpmXbyTpi5HOQllI9Ic4VpriInJsiIkmXiCXQnuIP0+s5M7GPayHxsPmJyqdJnNlUnkPXujEhNWGp/ePlPRhCps+/d+Zmqnh3YXVSR4CWqNq4npE8kSYeMY/wBhSLgXY2VF/E7bC3b3+U3T5mviKtbE50oM6UGZFAdFX2l9WLE9gtYdmk1jN1nKunxTHPQoL96s4VEA+9UYWJt3A3PwHbOjSVgoDG5CgMe821PxnzFPGu7vjKyAJQV0RQ4IFS4BINule+W+23dK8ZSq5EqOzHFVnApKCQtJbgnKvu7k/i5kvHwcn1sT58o1SqmFR2CYdFNR1JDM2XKqXGo0uT57ECUUeJGnSrOmufEGnhluTckBbrf7t7nnzhxPJ9PE+dWkaFTDUs7M9neq5ZiPZqhvcE2CX28VvvI0uJOqVcY1+mQmHTvClgpt3kkk8j4R4rk+kmjBYj2bZrXFrHl4TmcKotTpLTd8zqOmSbnM3TIP/t8LTXMy8b8Nm59dbGcTVlKrcki2otYds5NZmZct9NxfvERNZZXK/RjjMenOiaq9G+o+EzGYaWYZMzqPHXkNZ25yeH9ccj6TrQqIiJIlGJXY+UvleI6vnHHsXpkiInVkntpJELGwGs6tGgFFrX7z4xk2zbpopKCdTMmPKhToDrZb+s0SDU1bcXt3zd605ztxZ1sIq5QQBqNfQzNUwYzgA2BueVv7zVh6OQEXuL3EzI3apdbG0jNlRM0zMhG85ZY2N45bQiegS1KJ3MzMbemrZHK4o56K2Nt79h5fvtkeD1ctS3Ywt57j9+M7VekrqVIBFvhppbulGCwtPIjZBfKrX7b2BvfnOkwsvxi5bjLjeu3l6CdzAupprbsAB8D23nI4ilmDd4+Y/YmQGWOXHKizlI08SYGoxG2l7dptrMsox2J9lTaplLZRcgFRoNzdiBpvOSnFcUU/xDUUWjlDkFyXKHXMtha9tbG0zd5Xbc1PjvCZOH4MUaYpgk2uS3azMblj43M1Siri1R0pG+apmsB2BVJLHuGw5mZ+lkq8HQ4cYYEgALZrA3ZWDZiO25vceMy8VwzUr4w1L1ERhql1OeyqqJm6Op7z1je87SODexBsbGxBsd7HuM8q0lcWYXAZWse9SGU+RAmplRY4dHgdQUSq1Sj1FHtmK5ixJZjY3GU9Ii8z8P4aalRrt0MOQlHKtlFRSGdrEnNYixJOtztPp5ClSVBZRYZmbzZizHzJMeVHGOG/CCoq1K2IHTUh3C5WCdiKSSFXwAudBeYcJhqlasiKxC4ZFsXQAAkDIRTzGzWAbpHcagbTucaoVHVCiBylQOUJChiFYKSTuFYqxHbaT4TgTRSzNmdmLu/4nbfy7Jcvi4/WjDYdaa5Rc3JLMxuzMd2Y9p/QbCXRIVqiopdjZVBJPcBqZhpOJVhq4qIlQAgMgezaEBhfWZ+FY726NUC2TOyofxKthm8zm+EtLbbK6wFiSOyWSFSnmFryLLh3yuG7jry2M7kw4Th2ZyGOgCtYbnNewv2bTqVKIHVGncPpNcbrbPKb0piImGiWLQDjW/haeIhaa1FtJ0ww39rnllr44+JpZGy3vpfa0YamHbKTb6+EniabklypsT/aW4fBsLMTY3uB+c3r6N/G2lSVBYD8zzk4ibcyIiKU1Osn/L0l0prdZOZ/pM2YdQSbyk3VVMqrqTtzmzEKBa0ohljv4sb6yIbG/wAZrkV3PP6CSmcMdRrLLYZn4efsk90TSJl4WPskHMfBjNejxZiKWdbdu45zkEW0ndmTF4XN0l37fH9ZjPDf2N45a+PiP/1OOTMmGJbKxDVAguxUHooB3sR8hJY56joalZPZYdLN7O4z1CCMitbRFvbT+43/AOUK/t/ajMar+aooAQC+xGp5yvE8Oq1MMKLsrOpFmN8rhH6OftBKgX31PbMyz4bKy4XiNb2lPO4LOGd6YC5KNIKSGZt817bm24ttMuGWmiPj3Qm7fYIWe4ANktc3ux1tsBOniuHPUR6dOmlDOpzkBczmx6JyCwUnc6m19NbyOJwdWoaPQUJSZT7PMLkqhCm/VyqbadovyluLVZcbg6hpU1uqPUcVa4JIVsiZnLW6qghQbdpE9o8ZrLRes4DF6gTDqFy5r6Xte+W4vqb/ABE347h1SpSqjMPaOmUanIqg3yA2vY63a2t9rAAUYvh9So1N8iBKRAWiSDmUrlYlrZb7WG2mp1sCWXs6qnC8SqU3cVKntFSkXqsAoVKhYBaaEDXS41vrbbUTO3FMWUojQVKjllQAFmTMT0iequWwHboSTpN+I4W9TJTCJToB8z01td7C4zZRltcAWF+++gEup8Of2lesWAd1yUjvkTINfDpa+XjHeK1WXDcWcNXqOwNKkoXogAe0vqqNu24W53JBsAZXhuI1s9PO4vUu7UgFy0qIUnO7WzZttz3+Xh4NWbDLhgETKLnXN7Rw19SB0UO999tLDXTjOH1KiMlOlTo57Cowy52BYZgMottfUnXawveX+R9YK3GK7UnqqcivUyYeygu56oCgi1iQSSb9w75p4nROIqUcM3WCB65UkDKLdGw06TX8RNWLwDCpQdEDJSV1CZgtiQAra7jTmN9Z5hsJiKb1W6DPVKnP91LLbLl3YLrbv7SIbncOqhxhAlNMHRGU1WKAanLTGrtr2W9TOth6K00WmgsqqFA8BMmDwjK5ZwDkUJSe5LFCFLF7/ezLvN8LfDI9AvN9Lh7KwLWtvprc90rw2EJ6TaDsHafynSZidzN4YzW6xll5Gaj/ABH5IPkT9ZombDfxKnNB/wBBNM6Y9MVTiALXtrKUIvrNToDvI0kAH775zuNuTcy1FgiJqDrl7Ntp2k252ufiuoeY/qEvlGJ6o95fUS6Z9RERFEREkoxG6e/9DNANtpnxP3PfX6y+ET0m+88iIpFdz5eklIr1j5fWShDXszcJfKg8Gcf9jNMx8N6rDudx85b+xeNjNc3nkTy42jsKcRhQ+ux7+/nOZUpshsR+R5TtTxlBFiLjxmMsJW8crHDidGrgAeqbeB1EyPhXX7t+Ws5XGx0mUqmJ6RaeTLRERJERLVwznZT56estUbVRNqcPP3mA5azTTwqL2XPedZuYWs3KOdSw7vsNO87ToUMIq6nU+O3kJohiBqdBOmOMjFytIkabhhcHSSm2GXCdeof57fBRNUyYDeof91h8ABNcMejeyRp7CSkafVHKXq8SiIiFGJ+776+svlGJ3T3x9ZfArHRQAQdZXERBERJKMXsvvLL5RjepfuYH5zRCdnx5EREIDrHkPrJyH3v+P1k4Q0mPh/8A5B/vP9JsmPAdaoP9wn4wvcU6bJQaRzXO15fEbJe1LoiIiCJBKitoCCR2SckoxOIp0wM532G5+El7Gmdcq+QE8xOGSoAGGxuPy5S1VAFgLAbATOvp2q/w1P8ACJIUE/CvwEsiOot14qgbC3KexEQRIVagUXP9+U9RwwuDoZJKVYilnW3mOctiFm0owmHyDU6ncdgl8T0Sk1Dbtj4ds576rn0muY+F9Qnvdj85slj0r28baeJsOQnr7HkYTYchL1ePYiIhRiOsnvfSXzPX6yc29JohCRERBERJM+O6h8vUTRKMaOg3IeolyHQcoel7EREIfe/4/WTkD1hyMnDH00mPBdeqP5x8xNkxYX+LVHuf0mF7inVbYiJoEHaIkmPD4Qq9yQQNufjNkRCTRt2RERBERJEREkpxNAOPEbGe4eiEFvifGWxDR2THj6tVcuRb3OvaeXgPH0myJWbUB46eE9E8njHQnwkGThX8IHvLH/sZsmThQ+xTz/qM1ynUN7RqdU8pISFXqmTEvV4RERCir105N6S+UP8AxF90mXwhpEREEREkpxXUblLKR6K+6PSRxI6De6fSMP1V90ekPT4siIiEG6w85OQfdfP0k5md00mKh/HqeKoflNsxU/8AUP4oD8CBHLxRtiIiCIiSIiJIiIkiIiSIiJIiIkiIiSJCsbKx/lPpJyrFHoP7jf0mF6UV8NH2Se79TNMz4EfZp7gmiWPRvaFXqn99snIVdvMesnCdrwiRdwoJOwmYYskXCNbv/Ymgmf4o9z6zROd/im9pf2bdSw33vttLji2G6H4/pCKtcTIMbr0kIHff9JriiIiSQrdVvdPpI4Y9BeURD0+LYiIhB915ycRCd0+ExD/UHxpf/cRCqNsRE0CIiSIiJIiIkiIiSIiJIiIkiIiSJRjz9m/uH0iJXozt7hB9mnuL/SJdEQnSqFXs94ScRCd1eI1EDAqe2ZkwrroH+X774iaCpaVT2jfabKOz07tz8ZacK+nT220/fdESiqt8LqMzE9ui/WbBU/lPwiJJ/9k=" class="img-responsive" style="width:100%" alt="Image"></a></div>
+          <div class="panel-footer">Grooving to big day!</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">ELECTION</div>
+          <div class="panel-body"><a href="election.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGXvjIb3Uq31HGb0vlCdb1u7S38cSdYl_2g&usqp=CAU" class="img-responsive" style="width:100% height:30%;" alt="Image"></a></div>
+          <div class="panel-footer">Grooving to big day!</div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2><a href="about.html"> About Us</a></h2>
+     <h4></h4>
+     <p></p>
+      <button class="btn btn-default btn-lg" ><a href="response.html">Response</a>
+        </button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>

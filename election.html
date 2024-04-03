@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="birthday.css">
+    <script src="trial.js"></script>
+    <title>birthday</title>
+    <style>
+        .bg-grey {
+          background-color: #f6f6f6;
+        }
+        .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+    
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    .back{
+        background-image:url('https://t4.ftcdn.net/jpg/04/16/02/87/360_F_416028708_M4Cnj2FbPDD7qFn85DhVyZNJU22AR16d.jpg');
+        background-size: cover;
+    }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid-1">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="first.html">FUTURE TIMER</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="first.html">Home</a></li>
+            <li><a href="calendar.html">Calendar </a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>  
+      <div class="back"><br><br><br><br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Enter Date</th>
+                    <th>Enter Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="date" id="date" ></td>
+                    <td><input type="time" id="time" ></td>
+                </tr>
+            </tbody>
+        </table><br><br>
+        <button id="calculate">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+     
+        <div class="countdown">
+            <div>
+                <p class="heading">DAY</p>
+                <div class="time" id="countdown-days">00</div>
+            </div>
+            <div>
+                <p class="heading">HOURS</p>
+                <div class="time" id="countdown-hours">00</div>
+            </div>
+            <div>
+                <p class="heading">MINUTES</p>
+                <div class="time" id="countdown-minutes">00</div>
+            </div>
+            <div>
+                <p class="heading">SECONDS</p>
+                <div class="time" id="countdown-seconds">00</div><br><br><br><br><br>
+            </div>
+        </div></div>
+      </div>
+      <br><br>
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2><a href="about.html"> About Us</a></h2>
+     <h4></h4>
+     <p></p>
+      <button  class="btn btn-default btn-lg"><a href="response.html">Response</a></button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
