@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+<!--this code is for bhaidooj timer--> 
 html,body{
   display: grid;
   height: 100%;
