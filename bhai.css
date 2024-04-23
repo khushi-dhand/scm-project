@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -17,7 +17,7 @@ html,body{
 }
 ::selection{
   color: white;
-  background: #FC4782;
+  background: #FC4186;
 }
 .wrapper{
   color: white;
@@ -62,7 +62,7 @@ form .email-field button{
   transition: background 0.3s ease;
 }
 form .email-field button:hover{
-  background: #000;
+  background: #00000;
 }
 .wrapper .count-down{
   display: flex;
@@ -96,7 +96,7 @@ form .email-field button:hover{
     height: 80px;
   }
   .wrapper .count-down .timer{
-    width: 80px;
+    width: 81px;
   }
   .count-down .timer .numb{
     font-size: 20px;
